@@ -15,5 +15,9 @@ function enviar(event) {
     texto.innerHTML = text.value;
     texto.appendChild(hora);
     document.body.appendChild(texto);
+    limpiar();
   }
+}
+function limpiar(){
+  text.value = "";
 }
