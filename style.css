@@ -32,3 +32,16 @@ body{
   font-family: sans-serif serif;
   padding: 25px;
 }
+.mensaje{
+  background-color: azure;
+  border-radius: 10px;
+  padding: 8px;
+  margin-left: 4px;
+  max-width: 45%;
+}
+.hora{
+    color: grey;
+    font-size: 9px;
+    position: relative;
+    left: 70%;
+}
