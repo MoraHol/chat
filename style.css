@@ -1,0 +1,27 @@
+body{
+	background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/whatsapp-chat-background.jpg);
+}
+#button_send{
+  background-color: #46D852;
+    border-radius: 20px;
+    padding: 10px;
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    background-image: url(t-avic3b3n.png);
+    width: 42px;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+#escribir{
+  padding: 10px ;
+  border-radius: 20px;
+  border-bottom-style: none;
+  margin: 5px auto;
+  width: 85%;
+  position: fixed;
+  right: 10%;
+  bottom: 15px;
+}
