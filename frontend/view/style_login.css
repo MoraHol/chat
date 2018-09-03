@@ -1,0 +1,25 @@
+
+body{
+    background-color: white;
+    -webkit-background-color: white;
+    -moz-background-color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+form{
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  width: 500px;
+  height: 150px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 2px solid blue;
+  border-radius: 3px;
+}
+form input{
+  padding: 3px;
+  margin: 8px auto;
+}

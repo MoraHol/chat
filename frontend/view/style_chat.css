@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/whatsapp-chat-background.jpg);
+}
+
+#button_send {
+    border-radius: 20px;
+    padding: 10px;
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    background-color: #205081;
+    background-image: url(img/t-avic3b3n.png);
+    width: 42px;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#escribir {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px auto;
+    width: 85%;
+    position: fixed;
+    bottom: 15px;
+
+}
+
+#caja-chat {
+    width: 70%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.title {
+    color: white;
+    margin: 0;
+    background-color: #205081; //#075E54
+    font-family: sans-serif serif;
+    padding: 25px;
+}
+
+.mensaje {
+    background-color: azure;
+    border-radius: 10px;
+    padding: 8px;
+    margin-left: 4px;
+    max-width: 45%;
+    min-width: 40px;
+}
+
+.usuario {
+    color: red;
+    font-weight: bold;
+}
+
+.hora {
+    color: grey;
+    font-size: 9px;
+    float: right;
+}
