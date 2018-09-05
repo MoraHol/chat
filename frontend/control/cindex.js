@@ -1,6 +1,6 @@
 var text = document.getElementById("escribir");
 var send = document.getElementById("button_send");
-
+var flag = false;
 send.addEventListener("click", enviar);
 text.addEventListener("keyup", enviar);
 var caja = document.getElementById("caja-chat");
@@ -8,13 +8,12 @@ var caja = document.getElementById("caja-chat");
 function enviar(event) {
     if ((event.type == "click" || event.keyCode == 13) && text.value != "") {
         var mensa = $("#escribir").val();
-        $.post("../../backend/database.php", {
+        $.post("../../backend/blockchain/test.php", {
             mensaje: mensa
-        }, function (datos) {});
+        }, function (datos) {caja.innerHTML=datos;});
         limpiar();
     }
 }
-
 function limpiar() {
     text.value = "";
 }
@@ -26,8 +25,8 @@ function cargarMensajes() {
             caja.innerHTML = this.responseText;
         }
     };
-    ajax.open("GET", "../../backend/consulta_chat.php", true);
+    //ajax.open("GET", "../../backend/consulta_chat.php", true);
+    ajax.open("GET", "../../backend/blockchain/test.php", true);
     ajax.send();
 }
 setInterval(cargarMensajes,1000);
-
