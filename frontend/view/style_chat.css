@@ -30,7 +30,7 @@ body {
 }
 
 #caja-chat {
-     width: 80%;
+    width: 80%;
     margin: 0 auto;
     overflow: auto;
     height: 500px;
@@ -39,7 +39,7 @@ body {
 .title {
     color: white;
     margin: 0;
-    background-color: #205081; //#075E54
+    background-color: #205081;
     font-family: sans-serif serif;
     padding: 25px;
 }
