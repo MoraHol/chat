@@ -30,9 +30,10 @@ body {
 }
 
 #caja-chat {
-    width: 70%;
+     width: 80%;
     margin: 0 auto;
     overflow: auto;
+    height: 500px;
 }
 
 .title {

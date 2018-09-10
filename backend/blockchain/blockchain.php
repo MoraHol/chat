@@ -16,20 +16,23 @@ class Blockchain
       echo $value->generateMessage();
     }
   }
-  public function readFile(){
-    $file = fopen("hola.txt","r");
-    $contents = fread($file, filesize("hola.txt"));
-    $contents = explode(";",$contents);
-    foreach ($contents as $key => $value) { 
-      if(!empty($value)){
-        list($user,$message) = explode(",",$value);
-        $this->addTransaction($user,$message);
+  private function readFile(){
+    $file = fopen("hola.dat","r");
+    if (filesize("hola.dat") > 0){
+      $contents = fread($file, filesize("hola.dat"));
+      $contents = explode(";",$contents);
+      foreach ($contents as $key => $value) { 
+        if(!empty($value)){
+          list($user,$message) = explode(",",$value);
+          $this->addTransaction($user,$message);
       }
     }
     fclose($file);
+    }
+    
   }
   public function writeFile(){
-    $file = fopen("hola.txt","w");
+    $file = fopen("hola.dat","w");
     foreach ($this->Blocks as $value) {
       $texto = $value->fileWriteMessages();
       fwrite($file,$texto);
@@ -48,6 +51,11 @@ class Blockchain
     }else{
       $this->newBlock();
       $this->addTransaction($user,$message);
+    }
+  }
+  public function toString(){
+    foreach ($this->Blocks as $key => $value) {
+      echo $value->toString();
     }
   }
 }
