@@ -1,8 +1,5 @@
 <?php
 require "block.php";
-/**
-*
-*/
 class Blockchain
 {
   public $Blocks = array();
@@ -12,11 +9,32 @@ class Blockchain
     $blockgenesis = new Block(count($this->Blocks));
     $blockgenesis->setHashPrev("0000000000000000000000000000000000000000000000000000000000000000");
     $this->Blocks[0]=$blockgenesis;
+    $this->readFile();
   }
   public function showMessages(){
     foreach ($this->Blocks as $value) {
       echo $value->generateMessage();
     }
+  }
+  public function readFile(){
+    $file = fopen("hola.txt","r");
+    $contents = fread($file, filesize("hola.txt"));
+    $contents = explode(";",$contents);
+    foreach ($contents as $key => $value) { 
+      if(!empty($value)){
+        list($user,$message) = explode(",",$value);
+        $this->addTransaction($user,$message);
+      }
+    }
+    fclose($file);
+  }
+  public function writeFile(){
+    $file = fopen("hola.txt","w");
+    foreach ($this->Blocks as $value) {
+      $texto = $value->fileWriteMessages();
+      fwrite($file,$texto);
+    }
+    fclose($file);
   }
   private function newBlock(){
     $block = new Block(count($this->Blocks));
@@ -33,9 +51,4 @@ class Blockchain
     }
   }
 }
-$blockchain = new Blockchain();
-$blockchain->addTransaction("ale","alsalsas");
-$blockchain->addTransaction("ale","alsalsas43");
-$blockchain->addTransaction("ale","alsalsas12");
-$blockchain->addTransaction("ale","alslsasas");
 ?>

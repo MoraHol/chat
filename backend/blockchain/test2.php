@@ -1,6 +1,7 @@
 <?php
-require 'test.php';
-
-
-$blockchain->showMessages();
- ?>
+session_start();
+require "blockchain.php";
+$chain = $_SESSION["chain"];
+$chain= unserialize($chain);
+$chain->showMessages();
+?>

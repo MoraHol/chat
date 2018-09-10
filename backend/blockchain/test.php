@@ -1,7 +1,8 @@
 <?php
-require 'blockchain.php';
 session_start();
-$blockchain->addTransaction($_SESSION["usuario"],"hola");
-
-$blockchain->showMessages();
+require 'blockchain.php';
+$chain = $_SESSION["chain"];
+$chain= unserialize($chain);
+$chain->addTransaction($_SESSION["usuario"],$_POST["mensaje"]);
+$_SESSION["chain"] = serialize($chain);
 ?>

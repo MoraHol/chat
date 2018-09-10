@@ -10,7 +10,7 @@ function enviar(event) {
         var mensa = $("#escribir").val();
         $.post("../../backend/blockchain/test.php", {
             mensaje: mensa
-        }, function (datos) {caja.innerHTML=datos;});
+        });
         limpiar();
     }
 }
@@ -26,7 +26,7 @@ function cargarMensajes() {
         }
     };
     //ajax.open("GET", "../../backend/consulta_chat.php", true);
-    ajax.open("GET", "../../backend/blockchain/test.php", true);
+    ajax.open("GET", "../../backend/blockchain/test2.php", true);
     ajax.send();
 }
 setInterval(cargarMensajes,1000);
