@@ -1,5 +1,5 @@
 <?php
-    require "DB.php";
+require "DB.php";
 ?>
     <html>
     <head>
@@ -21,33 +21,33 @@
         <button><a href="../index.html" style="text-decoration:none;">Ingresar</a></button>
         <div>
             <?php
-                if(sizeof($_POST) > 3){
-                  $query= "SELECT * FROM chat_users WHERE nombre = '".$_POST["username"]."'";
-                  $result = mysqli_query($conexion,$query) or die ("pinche");
-                  if($column = mysqli_fetch_array($result)){
-                      echo "este nombre de usuario ya esta en uso";
-                      exit();
-                  }
-                  $query= "SELECT * FROM chat_users WHERE email = '".$_POST["email"]."'";
-                  $result = mysqli_query($conexion,$query);
+            if (sizeof($_POST) > 3) {
+                $query = "SELECT * FROM chat_users WHERE nombre = '" . $_POST["username"] . "'";
+                $result = mysqli_query($conexion, $query) or die("pinche");
+                if ($column = mysqli_fetch_array($result)) {
+                    echo "este nombre de usuario ya esta en uso";
+                    exit();
+                }
+                $query = "SELECT * FROM chat_users WHERE email = '" . $_POST["email"] . "'";
+                $result = mysqli_query($conexion, $query);
 
-                  if($column = mysqli_fetch_array($result)){
+                if ($column = mysqli_fetch_array($result)) {
                     echo "este correo ya esta en uso";
                     exit();
-                  }
+                }
 
-                  if($_POST["pass"] != $_POST["repeat-pass"]){
+                if ($_POST["pass"] != $_POST["repeat-pass"]) {
                     echo "la contraseña no coincide";
                     exit();
-                  }
-                  $query = "INSERT INTO `chat_users` (`id`, `nombre`, `email`, `password`) VALUES (NULL,'".$_POST["username"]."','".$_POST["email"]."','".$_POST["pass"]."')";
-                  $result = mysqli_query($conexion,$query) or die ("paila");
-                  if($result){
-                    echo "se ha registrado satisfactoriamente";
-                  }else{
-                    echo "no se ha podido registrar";
-                  }
                 }
+                $query = "INSERT INTO `chat_users` (`id`, `nombre`, `email`, `password`) VALUES (NULL,'" . $_POST["username"] . "','" . $_POST["email"] . "','" . $_POST["pass"] . "')";
+                $result = mysqli_query($conexion, $query) or die("paila");
+                if ($result) {
+                    echo "se ha registrado satisfactoriamente";
+                } else {
+                    echo "no se ha podido registrar";
+                }
+            }
 
             ?>
         </div>

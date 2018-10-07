@@ -14,6 +14,7 @@ function enviar(event) {
         limpiar();
     }
 }
+
 function limpiar() {
     text.value = "";
 }
@@ -29,4 +30,4 @@ function cargarMensajes() {
     ajax.open("GET", "../../backend/blockchain/test2.php", true);
     ajax.send();
 }
-setInterval(cargarMensajes,1000);
+setInterval(cargarMensajes, 1000);

@@ -54,7 +54,7 @@ class Block
     return $data;
   }
   public function toString(){
-    return "ID: " . strval($this->ID) ." Nonce :". $this->Nonce . " Data: " . $this->dataToString() ." hashPrev :". $this->hashPrev . " hash :". $this->hash;
+    return "ID: " . strval($this->ID) ." Nonce :". $this->Nonce . " Data: " . $this->dataToString() ." hashPrev :". $this->hashPrev . " hash :". $this->hash."\n";
   }
   /*
   * retorna los mensajes guardados en el bloque generando html

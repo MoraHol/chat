@@ -6,8 +6,6 @@ class FileStream{
     public function readFile(){
         $file_read =fopen("hola.dat","r");
         if (filesize($this->file) > 0) {
-            
         }
     }
-
 }

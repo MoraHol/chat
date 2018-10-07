@@ -21,7 +21,7 @@ class Blockchain
     if (filesize("hola.dat") > 0){
       $contents = fread($file, filesize("hola.dat"));
       $contents = explode(";",$contents);
-      foreach ($contents as $key => $value) { 
+      foreach ($contents as $key => $value) {
         if(!empty($value)){
           list($user,$message) = explode(",",$value);
           $this->addTransaction($user,$message);
@@ -29,7 +29,6 @@ class Blockchain
     }
     fclose($file);
     }
-    
   }
   public function writeFile(){
     $file = fopen("hola.dat","w");
@@ -56,6 +55,7 @@ class Blockchain
   public function toString(){
     foreach ($this->Blocks as $key => $value) {
       echo $value->toString();
+      echo "<br>";
     }
   }
 }
