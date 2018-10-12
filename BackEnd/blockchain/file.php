@@ -4,8 +4,11 @@ class FileStream{
         $this->file = $file;
     }
     public function readFile(){
-        $file_read =fopen("hola.txt","r");
+        $file_read =fopen($file,"r");
         if (filesize($this->file) > 0) {
+            $contents = fread($file, filesize("../hola.txt"));
         }
+        fclose($file);
+        return $contents;
     }
 }
