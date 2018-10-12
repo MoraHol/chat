@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/whatsapp-chat-background.jpg);
+    background-image: url(../img/whatsapp-chat-background.jpg);
 }
 
 #button_send {
@@ -11,7 +11,7 @@ body {
     right: 60px;
     bottom: 20px;
     background-color: #205081;
-    background-image: url(img/t-avic3b3n.png);
+    background-image: url(../img/t-avic3b3n.png);
     width: 42px;
     height: auto;
     background-repeat: no-repeat;

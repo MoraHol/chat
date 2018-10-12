@@ -17,9 +17,9 @@ class Blockchain
     }
   }
   private function readFile(){
-    $file = fopen("hola.dat","r");
-    if (filesize("hola.dat") > 0){
-      $contents = fread($file, filesize("hola.dat"));
+    $file = fopen("../hola.txt","r");
+    if (filesize("../hola.txt") > 0){
+      $contents = fread($file, filesize("../hola.txt"));
       $contents = explode(";",$contents);
       foreach ($contents as $key => $value) {
         if(!empty($value)){
@@ -31,7 +31,7 @@ class Blockchain
     }
   }
   public function writeFile(){
-    $file = fopen("hola.dat","w");
+    $file = fopen("../hola.txt","w");
     foreach ($this->Blocks as $value) {
       $texto = $value->fileWriteMessages();
       fwrite($file,$texto);

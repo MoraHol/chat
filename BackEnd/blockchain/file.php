@@ -4,7 +4,7 @@ class FileStream{
         $this->file = $file;
     }
     public function readFile(){
-        $file_read =fopen("hola.dat","r");
+        $file_read =fopen("hola.txt","r");
         if (filesize($this->file) > 0) {
         }
     }
