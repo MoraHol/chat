@@ -5,9 +5,11 @@ function request()
     /**
     *Este archivo permite enviar por cURL un mensaje al servidor2 :D
     */
-    $url = "http://172.17.0.111/BackEnd/cURL/response.php";
+    $url = "http://localhost/chat/BackEnd/cURL/response.php";
     $filestream = new FileStream("../hola.txt");
-    $postData = array("blockchain" => $filestream->readFile(),"sha" => hash("sha256",$filestream->readFile()));
+    $contens = $filestream->readFile();
+    $sha = hash("sha256",$filestream->readFile());
+    $postData = array("blockchain" => $contens,"sha" => $sha , "size" => $filestream->size());
 
 
     $handler = curl_init();
