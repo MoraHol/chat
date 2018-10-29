@@ -1,19 +1,47 @@
 <!DOCTYPE HTML>
 <html lang="es">
+
 <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style_login.css">
-    </head>
-    <body>
-        <form action="../../BackEnd/scripts/login.php" method="post">
-            <input type="text" name="nombre" placeholder="Ingresa tu usuario" required>
-            <br>
-            <input type="password" name="pass" placeholder="Ingresa tu contraseña" required>
-            <br>
-            <input type="submit" name="Enviar" value="ingresar">
+</head>
 
-        </form>
-        <br>
-        <button id="register"><a href="register.html">Registrarse</a></button>
-    </body>
+<body id="LoginForm">
+    <div class="container">
+        <h1 class="form-heading">login Form</h1>
+        <div class="login-form">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Admin Login</h2>
+                    <p>Please enter your user and password</p>
+                </div>
+                <form action="../../BackEnd/scripts/login.php" method="post" id=login>
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="pass" placeholder="Ingresa tu contraseña" required  id="inputPassword">
+                    </div>
+                    <div class="forgot">
+                            <a href="reset.html">Forgot password?</a>
+                    </div>
+                    <input type="submit" name="Enviar" value="ingresar" class="btn btn-primary">
+
+                </form>
+                <br>
+                <button id="register" class="btn btn-primary" >register</button>
+                <script>
+                document.getElementById("register").addEventListener("click",register);
+                function register(){
+                    location.href="register.html";
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

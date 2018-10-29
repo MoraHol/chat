@@ -1,25 +1,85 @@
 <html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style_register.css">
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
-    <form>
-        <br>
-        <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" required>
-        <br>
-        <input type="email" id="email" placeholder="Ingresa tu correo electronico" required>
-        <br>
-        <input type="password" id="pass" placeholder="Ingresa tu contraseña" required id="pass">
-        <br>
-        <input type="password" id="repeat-pass" placeholder="Ingresa nuevamente tu contraseña" required >
-        <br>
-        <input type="button"  value="Registrarme" id="send">
-    </form>
-    <div id="response"></div>
-    <button><a href="../view/index.html" style="text-decoration:none;">Ingresar</a></button>
-    <script src="../control/Cregister.js"></script>
+    <div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h1 class="title">Myochat</h1>
+                    <hr />
+                </div>
+            </div>
+            <div class="main-login main-center">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" id="username" placeholder="Ingresa tu nombre de usuario"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electronico"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="password" id="pass" class="form-control" placeholder="Ingresa tu contraseña"
+                                    required id="pass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" id="repeat-pass" placeholder="Ingresa nuevamente tu contraseña"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <input type="button" class="btn btn-primary btn-lg btn-block login-button" value="Registrarme"
+                            id="send">
+                    </div>
+
+                </form>
+                <div id="response"></div>
+                <div class="login-register">
+                    <a href="../view/index.html">Login</a>
+                </div>
+                <script src="../control/Cregister.js"></script>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
